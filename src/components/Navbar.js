@@ -5,61 +5,63 @@ import "../styles/components/navbar.scss";
 function Navbar() {
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link to="/" className="logo">
         <h4>LOGO</h4>
       </Link>
-      <NavLink
-        to="/library"
-        className={({ isActive }) => (isActive ? "link active" : "link")}
-      >
-        <h4>Library</h4>
-      </NavLink>
-      <Link to="/bookshelf/reading">
-        <h4>Bookshelf</h4>
-      </Link>
+      <div className="nav">
+        <NavLink
+          to="/library"
+          className={({ isActive }) => (isActive ? "link active" : "link")}
+        >
+          <h4>Library</h4>
+        </NavLink>
+        <Link to="/bookshelf/reading">
+          <h4>Bookshelf</h4>
+        </Link>
 
-      <div className="bookshelf">
+        <div className="bookshelf">
+          <NavLink
+            to="/bookshelf/reading"
+            className={({ isActive }) => (isActive ? "link active" : "link")}
+          >
+            <h4>Reading</h4>
+          </NavLink>
+          <NavLink
+            to="/bookshelf/plantoread"
+            className={({ isActive }) => (isActive ? "link active" : "link")}
+          >
+            <h4>Plan to Read</h4>
+          </NavLink>
+          <NavLink
+            to="/bookshelf/dropped"
+            className={({ isActive }) => (isActive ? "link active" : "link")}
+          >
+            <h4>Dropped</h4>
+          </NavLink>
+          <NavLink
+            to="/bookshelf/completed"
+            className={({ isActive }) => (isActive ? "link active" : "link")}
+          >
+            <h4>Completed</h4>
+          </NavLink>
+        </div>
+
         <NavLink
-          to="/bookshelf/reading"
+          to="/search"
           className={({ isActive }) => (isActive ? "link active" : "link")}
         >
-          <h4>Reading</h4>
+          <h4>Search</h4>
         </NavLink>
         <NavLink
-          to="/bookshelf/plantoread"
+          to="/profile"
           className={({ isActive }) => (isActive ? "link active" : "link")}
         >
-          <h4>Plan to Read</h4>
+          <h4>Profile</h4>
         </NavLink>
-        <NavLink
-          to="/bookshelf/dropped"
-          className={({ isActive }) => (isActive ? "link active" : "link")}
-        >
-          <h4>Dropped</h4>
-        </NavLink>
-        <NavLink
-          to="/bookshelf/completed"
-          className={({ isActive }) => (isActive ? "link active" : "link")}
-        >
-          <h4>Completed</h4>
-        </NavLink>
+        <Link to="/">
+          <h4>Logout</h4>
+        </Link>
       </div>
-
-      <NavLink
-        to="/search"
-        className={({ isActive }) => (isActive ? "link active" : "link")}
-      >
-        <h4>Search</h4>
-      </NavLink>
-      <NavLink
-        to="/profile"
-        className={({ isActive }) => (isActive ? "link active" : "link")}
-      >
-        <h4>Profile</h4>
-      </NavLink>
-      <Link to="/">
-        <h4>Logout</h4>
-      </Link>
     </div>
   );
 }

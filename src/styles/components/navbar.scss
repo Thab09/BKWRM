@@ -1,20 +1,23 @@
 .navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 20%;
-  height: 100vh;
   a {
     font-size: 16px;
     text-decoration: none;
     color: rgb(0, 0, 0);
   }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20%;
+    height: 100vh;
 
-  .link {
-    color: rgb(255, 61, 61);
-  }
+    .link {
+      color: rgb(255, 61, 61);
+    }
 
-  .active {
-    color: rgb(61, 255, 213);
+    .active {
+      color: rgb(61, 255, 213);
+    }
   }
 }
