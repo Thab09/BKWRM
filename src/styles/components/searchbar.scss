@@ -1,0 +1,27 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  .searchbar {
+    border: 0.8px solid #000000;
+    height: 40px;
+    width: 80%;
+  }
+  .searchbutton {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    height: 40px;
+    width: 15%;
+    border: 0.8px solid #000000;
+    background-color: #ffffff;
+  }
+}
+
+.searchby {
+  display: flex;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+}
